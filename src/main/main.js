@@ -1,4 +1,4 @@
-var button = 0;
+let button = 0;
 
 function increase(){
   button++;
