@@ -4,6 +4,8 @@ let answer2;
 let answer3;
 let answer4;
 
+import { questionBank } from "resources/Questions.js";
+
 question = "How would you print \"\Hello World\"?";
 
 setInterval(function update(){
@@ -16,7 +18,7 @@ setInterval(function update(){
 
 
 
-function generateQuestion(){
+function generateQuestion(questionBank){
   //generate random number to choose question from bank
 
   //pick questions and aswers from questions.js arrays
@@ -24,7 +26,9 @@ function generateQuestion(){
   //initiate quiz variables with correspondinng data
 
   //display question and answers
-
+  // question = questionBank[(Math.random(questionBank.length() - 1))];
+  question = questionBank[0];
+   setInterval(update());
 }
 
 function setAnswer(){
