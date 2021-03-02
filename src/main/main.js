@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let question;
 let answer1;
 let answer2;
@@ -13,7 +14,16 @@ setInterval(function update(){
   document.getElementById('ans3').innerHTML = answer3;
   document.getElementById('ans4').innerHTML = answer4;
 });
+=======
 
-setInterval(function update(){
-  document.getElementById('button').innerHTML = button;
-});
+>>>>>>> 1275da057cadc688b246a98c50cbf237d8947d2b
+
+
+
+function generateQuestion(){
+  //generate random number to choose question from bank
+
+  //take question and parse out answer and // QUESTION:
+
+  //
+}
