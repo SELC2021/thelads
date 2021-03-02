@@ -1,9 +1,11 @@
-let button = 0;
 
-function increase(){
-  button++;
+
+
+
+function generateQuestion(){
+  //generate random number to choose question from bank
+
+  //take question and parse out answer and // QUESTION:
+
+  //
 }
-
-setInterval(function update(){
-  document.getElementById('button').innerHTML = button;
-});
