@@ -4,7 +4,7 @@ let answer2;
 let answer3;
 let answer4;
 
-import { questionBank } from "resources/Questions.js";
+import { questionBank } from "src/resources/Questions.js";
 
 question = "How would you print \"\Hello World\"?";
 answer1 = "print (\"\Hello World\")";
