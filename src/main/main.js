@@ -7,6 +7,7 @@ let answer4;
 import { questionBank } from "resources/Questions.js";
 
 question = "How would you print \"\Hello World\"?";
+answer1 = "print (\"\Hello World\")";
 
 setInterval(function update(){
   document.getElementById('question').innerHTML = question;
