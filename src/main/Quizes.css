@@ -10,3 +10,23 @@ button {width: 50%;
 height: 50px;
 font-size: 25px}
 th{font-size: 25px;}
+
+ul{
+    list-style-type: none;
+    float: right;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+body {
+    background-color: grey;
+    margin-top: 50px;
+}
