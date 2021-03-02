@@ -5,6 +5,7 @@ let answer3;
 let answer4;
 
 question = "How would you print \"\Hello World\"?";
+answer1 = "print (\"\Hello World\")";
 
 setInterval(function update(){
   document.getElementById('question').innerHTML = question;
