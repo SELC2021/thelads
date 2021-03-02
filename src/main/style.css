@@ -24,12 +24,7 @@ ul li a{
 }
 body {
     background-color: grey;
+    margin-top: 50px;
 }
 
-table {
-    width: 100%;
-}
-button {width: 50%;
-height: 50px;
-font-size: 25px}
-th{font-size: 25px;}
+
