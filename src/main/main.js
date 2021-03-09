@@ -4,17 +4,22 @@ let answer2;
 let answer3;
 let answer4;
 
-import { questionBank } from "src/resources/Questions.js";
+//import { questionBank } from "src/resources/Questions.js";
 
-question = "How would you print \"\Hello World\"?";
-answer1 = "print (\"\Hello World\")";
-
+question = "How would you print \"Hello World\"?";
+answer1 = "print (\"Hello World\")";
+answer2 = "print \"Hello World\"";
+answer3 = "(\"Hello World\")";
+answer4 = "print (Hello World)";
+correct = "Correct"
+console.log(question);
 setInterval(function update(){
   document.getElementById('question').innerHTML = question;
   document.getElementById('ans1').innerHTML = answer1;
   document.getElementById('ans2').innerHTML = answer2;
   document.getElementById('ans3').innerHTML = answer3;
   document.getElementById('ans4').innerHTML = answer4;
+  document.getElementById('result').innerHTML = correct;
 });
 
 
