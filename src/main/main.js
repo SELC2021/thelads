@@ -11,7 +11,7 @@ answer1 = "print (\"Hello World\")";
 answer2 = "print \"Hello World\"";
 answer3 = "(\"Hello World\")";
 answer4 = "print (Hello World)";
-correct = "Select the correct answer."
+correct = "Select the correct answer.";
 console.log(question);
 setInterval(function update(){
   document.getElementById('question').innerHTML = question;
