@@ -1,30 +1,44 @@
-let question;
-let answer1;
-let answer2;
-let answer3;
-let answer4;
-
-//import { questionBank } from "src/resources/Questions.js";
-
-question = "How would you print \"Hello World\"?";
-answer1 = "print (\"Hello World\")";
-answer2 = "print \"Hello World\"";
-answer3 = "(\"Hello World\")";
-answer4 = "print (Hello World)";
-correct = "Select the correct answer."
-console.log(question);
-setInterval(function update(){
-  document.getElementById('question').innerHTML = question;
-  document.getElementById('ans1').innerHTML = answer1;
-  document.getElementById('ans2').innerHTML = answer2;
-  document.getElementById('ans3').innerHTML = answer3;
-  document.getElementById('ans4').innerHTML = answer4;
-  document.getElementById('result').innerHTML = correct;
-});
+let question = "test";
+let answer1 = "ans1";
+let answer2 = "ans2";
+let answer3 = "ans3";
+let answer4 = "ans4";
+let correct = "correct";
+let i = 0;
 
 
+// question = "How would you print \"Hello World\"?";
+// answer1 = "print (\"Hello World\")";
+// answer2 = "print \"Hello World\"";
+// answer3 = "(\"Hello World\")";
+// answer4 = "print (Hello World)";
+// correct = "Select the correct answer.";
 
-function generateQuestion(questionBank){
+
+function testFunc(){
+
+  console.log("hello");
+
+}
+
+
+
+function update(){
+  setInterval(function(){
+    document.getElementById('question').innerHTML = question;
+    document.getElementById('ans1').innerHTML = answer1;
+    document.getElementById('ans2').innerHTML = answer2;
+    document.getElementById('ans3').innerHTML = answer3;
+    document.getElementById('ans4').innerHTML =  answer4;
+    document.getElementById('result').innerHTML = correct;
+  });
+}
+
+
+
+
+function generateQuestion(){
+  console.log("generating question");
   //generate random number to choose question from bank
 
   //pick questions and aswers from questions.js arrays
@@ -33,8 +47,17 @@ function generateQuestion(questionBank){
 
   //display question and answers
   // question = questionBank[(Math.random(questionBank.length() - 1))];
-  question = questionBank[0];
-   setInterval(update());
+  question = questionBank[i];
+  answer1 = answersOne[i];
+  answer2 = answersTwo[i];
+  answer3 = answersThree[i];
+  answer4 = correctAns[i];
+
+
+  correct = correctAns[i];
+  i++;
+   update();
+   console.log(question);
 }
 
 function setAnswer(){
