@@ -1,6 +1,7 @@
 <html>
 <head>
     <script type="text/javascript" src="main.js"></script>
+    <script type = "text/javascript" src= "Questions.js"></script>
     <link rel="stylesheet" type="text/css" href="Quizes.css">
     <title>PyEducate</title>
 </head>
@@ -22,12 +23,13 @@
               <th id = "question"></th>
             </tr>
         </table>
-        <button id = "ans1">Answer 1</button><button id = "ans2">Answer 2</button>
-        <button id = "ans3">Answer 3</button><button id = "ans4">Answer 4</button>
+        <button id = "ans1"></button><button id = "ans2"></button>
+        <button id = "ans3"></button><button id = "ans4"></button>
         <div id = "result"></div>
     </p>
     <div>
-      <button onclick() = "generateQuestion(questionBank)" id = "newQuestion">Click for new question</button>
+      <button onclick = "generateQuestion()" id = "newQuestion">Click for new question</button>
+      <button onclick="testFunc()">test function</button>
     </div>
 </body>
 
