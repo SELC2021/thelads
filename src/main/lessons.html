@@ -3,10 +3,47 @@
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>PyEducate</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+     $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+    });
+    });
+    </script>
+    <style>
+          h1{
+          text-align: center;
+          font-size: 60px;
+        }
+        p{
+          text-align: justify;
+          text-indent: 50px;
+          padding-top: 50px;
+          padding-left: 10px;
+          padding-right: 10px;
+          font-size: 20px;
+        }
+#panel, #flip {
+
+  padding: 5px;
+  text-align: center;
+  background-color: #6d7374;
+  border: solid 1px #464444;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+    </style>
 </head>
 
 <body>
     <header>
+       <h1>
+           Lessons
+       </h1>
         <div class="main">
           <ul>
               <li><a href='lessons.html'>Lessons</a></li>
@@ -14,12 +51,17 @@
               <li><a href='resources.html'>Resources</a></li>
               <li><a href='faq.html'>FAQ</a></li>
           </ul>
+          
         </div>
        </header>
-    <p>
-        Text for the lessons page
-    </p>
-</body>
+   
+       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+       <div id="flip">Click to view lessons</div>
+       <div id="panel">Lessons go here</div>
+    </body>
 
 
 </html>
