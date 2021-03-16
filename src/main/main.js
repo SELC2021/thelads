@@ -1,61 +1,72 @@
-let question = "test";
-let answer1 = "ans1";
-let answer2 = "ans2";
-let answer3 = "ans3";
-let answer4 = "ans4";
-let correct = "correct";
+
+
+//Author: Jackson Joblinske,
+//Class: SE186X
+//Group: TheLads
+
+//question object
+let Question = {
+   question : "",
+   answer1 : "",
+   answer2 : "",
+   answer3 : "",
+   answer4 : "",
+   correct : "",
+};
+
+
+// Question.question = "test";
+// Question.answer1 = "ans1";
+// Question.answer2 = "ans2";
+// Question.answer3 = "ans3";
+// Question.answer4 = "ans4";
+// Question.correct = "correct";
+
 let i = 0;
 
 
-// question = "How would you print \"Hello World\"?";
-// answer1 = "print (\"Hello World\")";
-// answer2 = "print \"Hello World\"";
-// answer3 = "(\"Hello World\")";
-// answer4 = "print (Hello World)";
-// correct = "Select the correct answer.";
 
 
-function testFunc(){
+//test case for buttons
+// function testFunc(){
+//
+//   console.log("hello");
+//
+// }
 
-  console.log("hello");
 
-}
-
-
-
+//update the screen and display the new question and answers
 function update(){
   setInterval(function(){
-    document.getElementById('question').innerHTML = question;
-    document.getElementById('ans1').innerHTML = answer1;
-    document.getElementById('ans2').innerHTML = answer2;
-    document.getElementById('ans3').innerHTML = answer3;
-    document.getElementById('ans4').innerHTML =  answer4;
-    document.getElementById('result').innerHTML = correct;
+    document.getElementById('question').innerHTML = Question.question;
+    document.getElementById('ans1').innerHTML = Question.answer1;
+    document.getElementById('ans2').innerHTML = Question.answer2;
+    document.getElementById('ans3').innerHTML = Question.answer3;
+    document.getElementById('ans4').innerHTML =  Question.answer4;
+    document.getElementById('result').innerHTML = Question.correct;
   });
 }
 
 
 
-
+//generate a question form a bank of questions
 function generateQuestion(){
-  console.log("generating question");
-  //generate random number to choose question from bank
+  console.log("generating question...");
 
-  //pick questions and aswers from questions.js arrays
+  console.log("Generating random number...");
+  let i = (Math.floor(Math.random() * questionBank.length));
 
-  //initiate quiz variables with correspondinng data
+  console.log("number: " + (i + 1) + "/" + questionBank.length);
 
-  //display question and answers
-  // question = questionBank[(Math.random(questionBank.length() - 1))];
-  question = questionBank[i];
-  answer1 = answersOne[i];
-  answer2 = answersTwo[i];
-  answer3 = answersThree[i];
-  answer4 = correctAns[i];
+
+  Question.question = questionBank[i];
+  Question.answer1 = answersOne[i];
+  Question.answer2 = answersTwo[i];
+  Question.answer3 = answersThree[i];
+  Question.answer4 = correctAns[i];
 
 
   correct = correctAns[i];
-  i++;
    update();
    console.log(question);
 }
