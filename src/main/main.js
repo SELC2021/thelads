@@ -59,11 +59,11 @@ function generateQuestion(){
   console.log("number: " + (i + 1) + "/" + questionBank.length);
 
 
-  question = questionBank[i];
-  answer1 = answersOne[i];
-  answer2 = answersTwo[i];
-  answer3 = answersThree[i];
-  answer4 = correctAns[i];
+  Question.question = questionBank[i];
+  Question.answer1 = answersOne[i];
+  Question.answer2 = answersTwo[i];
+  Question.answer3 = answersThree[i];
+  Question.answer4 = correctAns[i];
 
 
   correct = correctAns[i];
