@@ -12,6 +12,9 @@
     });
     </script>
     <style>
+        dd {
+            padding-bottom: 5px;
+        }
           h1{
           text-align: center;
           font-size: 60px;
@@ -25,7 +28,7 @@
           font-size: 20px;
         }
 #panel, #flip {
-
+  margin: auto;
   padding: 5px;
   text-align: center;
   background-color: #6d7374;
@@ -33,7 +36,8 @@
 }
 
 #panel {
-  padding: 50px;
+    margin: auto;
+  padding: 25px;
   display: none;
 }
     </style>
@@ -55,12 +59,21 @@
         </div>
        </header>
    
-       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+       <p>This page serves as a basic directory for all of the lessons, please click below to see a list of all the accessible lessons.</p>
+      
        <div id="flip">Click to view lessons</div>
-       <div id="panel">Lessons go here</div>
+       <div id="panel">
+         <dl>
+             <dt><a href='#'>Lesson 1</a></dt>
+             <dd>This lesson involves basic syntax</dd>
+             <dt><a href='#'>Lesson 2</a></dt>
+             <dd>This lesson involves variables and variable types</dd> 
+             <dt><a href='#'>Lesson 3</a></dt>
+             <dd>This lesson involves printing and obtaining user input</dd>
+             <dt><a href='#'>Lesson 4</a></dt>
+             <dd>This lesson involves basic math functions within Python</dd>
+         </dl>
+       </div>
     </body>
 
 
