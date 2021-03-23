@@ -23,6 +23,8 @@ let ANS;
 //position clicked by user
 let CHECK;
 
+let position;
+
 
 
 
@@ -137,9 +139,11 @@ function setAnswer(i){
   return ANS;
 }
 
-function validateAnswer(ANS){
+function validateAnswer(pos){
 
-  CHECK = 0;
+  CHECK = pos;
+
+  console.log(CHECK);
   //parameters: question number,score
 
   //check if answer location is = to correct location
