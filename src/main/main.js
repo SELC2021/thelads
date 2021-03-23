@@ -14,15 +14,9 @@ let Question = {
    correct : "",
 };
 
-
-// Question.question = "test";
-// Question.answer1 = "ans1";
-// Question.answer2 = "ans2";
-// Question.answer3 = "ans3";
-// Question.answer4 = "ans4";
-// Question.correct = "correct";
-
+//used to choose question
 let i = 0;
+let position;
 
 
 
@@ -49,7 +43,7 @@ function update(){
 
 
 
-//generate a question form a bank of questions
+//generate a question from a bank of questions
 function generateQuestion(){
   console.log("generating question...");
 
@@ -60,21 +54,30 @@ function generateQuestion(){
 
 
   Question.question = questionBank[i];
+  position = setAnswer();
   Question.answer1 = answersOne[i];
   Question.answer2 = answersTwo[i];
   Question.answer3 = answersThree[i];
   Question.answer4 = correctAns[i];
 
 
-  correct = correctAns[i];
+  Question.correct = correctAns[i];
    update();
-   console.log(question);
+   console.log(Question.question);
 }
 
 function setAnswer(){
 
-  let ANS = Math.random(4);
+  console.log("Generating answers...");
+
+  console.log("Generating random number...");
+  let ANS = Math.floor(Math.random() * 4);
+
+
+  console.log("number: " + (ANS + 1));
   //randomize which answer goes where
+
+
 
   //track where the correct answer lands
 
@@ -83,7 +86,7 @@ function setAnswer(){
   return ANS;
 }
 
-function validateAnswer(num, score){
+function validateAnswer(position){
 
   let CHECK;
   //parameters: question number,score
