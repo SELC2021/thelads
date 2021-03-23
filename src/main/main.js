@@ -1,10 +1,10 @@
+/*
+Author: Jackson Joblinske,
+Class: SE186X
+Group: TheLads
+*/
 
-
-//Author: Jackson Joblinske,
-//Class: SE186X
-//Group: TheLads
-
-//question object
+//question object that stores info about the question and answers generated
 let Question = {
    question : "",
    answer1 : "",
@@ -16,7 +16,12 @@ let Question = {
 
 //used to choose question
 let i = 0;
-let position;
+
+//position of correct answer
+let ANS;
+
+//position clicked by user
+let CHECK;
 
 
 
@@ -47,48 +52,93 @@ function update(){
 function generateQuestion(){
   console.log("generating question...");
 
+//generate a random number and set i = to it
   console.log("Generating random number...");
   let i = (Math.floor(Math.random() * questionBank.length));
 
+//---------debug case for i
   console.log("number: " + (i + 1) + "/" + questionBank.length);
 
-
+//set the question field in Question object
   Question.question = questionBank[i];
-  position = setAnswer();
-  Question.answer1 = answersOne[i];
-  Question.answer2 = answersTwo[i];
-  Question.answer3 = answersThree[i];
-  Question.answer4 = correctAns[i];
+
+  //set the answers to their positions
+  setAnswer();
 
 
+//set the correct field to the correct answer in the Question object
   Question.correct = correctAns[i];
+
+  //update the screen to show questions and answers
    update();
+
+   //----------debug case for question
    console.log(Question.question);
+
 }
 
+/*
+@METHOD
+@DESCRIPTION - sets the answers positions
+@PARAM - ANS = position of correct answer
+*/
 function setAnswer(){
 
   console.log("Generating answers...");
 
+
+//generate random number to decide where correct answer goes
   console.log("Generating random number...");
-  let ANS = Math.floor(Math.random() * 4);
+   ANS = Math.floor(Math.random() * 4);
 
-
+//---------debug case for ANS
   console.log("number: " + (ANS + 1));
-  //randomize which answer goes where
+  //randomize which answer goes where and keep track of where it is
+
+  switch(ANS){
+    case 0:
+      Question.answer1 = correctAns[i];
+      Question.answer2 = answersOne[i];
+      Question.answer3 = answersTwo[i];
+      Question.answer4 = answersThree[i];
+      Question.correct = correctAns[i];
+      break;
+    case 1:
+      Question.answer1 = answersOne[i];
+      Question.answer2 = correctAns[i];
+      Question.answer3 = answersTwo[i];
+      Question.answer4 = answersThree[i];
+      Question.correct = correctAns[i];
+      break;
+    case 2:
+      Question.answer1 = answersTwo[i];
+      Question.answer2 = answersOne[i];
+      Question.answer3 = correctAns[i];
+      Question.answer4 = answersThree[i];
+      Question.correct = correctAns[i];
+      break;
+    case 3:
+      Question.answer1 = answersThree[i];
+      Question.answer2 = answersTwo[i];
+      Question.answer3 = answersOne[i];
+      Question.answer4 = correctAns[i];
+      Question.correct = correctAns[i];
+      break;
+    default:
+      (console.log("ERROR"));
+      break;
+  }
 
 
 
-  //track where the correct answer lands
 
   //return correct answer location
-
   return ANS;
 }
 
-function validateAnswer(position){
+function validateAnswer(ANS){
 
-  let CHECK;
+  CHECK = 0;
   //parameters: question number,score
 
   //check if answer location is = to correct location
