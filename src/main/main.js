@@ -63,11 +63,7 @@ function generateQuestion(){
   Question.question = questionBank[i];
 
   //set the answers to their positions
-  setAnswer();
-
-
-//set the correct field to the correct answer in the Question object
-  Question.correct = correctAns[i];
+  setAnswer(i);
 
   //update the screen to show questions and answers
    update();
@@ -80,9 +76,10 @@ function generateQuestion(){
 /*
 @METHOD
 @DESCRIPTION - sets the answers positions
+@PARAM i = index of questions and answers
 @PARAM - ANS = position of correct answer
 */
-function setAnswer(){
+function setAnswer(i){
 
   console.log("Generating answers...");
 
@@ -102,6 +99,7 @@ function setAnswer(){
       Question.answer3 = answersTwo[i];
       Question.answer4 = answersThree[i];
       Question.correct = correctAns[i];
+      console.log("case : 0");
       break;
     case 1:
       Question.answer1 = answersOne[i];
@@ -109,6 +107,7 @@ function setAnswer(){
       Question.answer3 = answersTwo[i];
       Question.answer4 = answersThree[i];
       Question.correct = correctAns[i];
+      console.log("case : 1");
       break;
     case 2:
       Question.answer1 = answersTwo[i];
@@ -116,6 +115,7 @@ function setAnswer(){
       Question.answer3 = correctAns[i];
       Question.answer4 = answersThree[i];
       Question.correct = correctAns[i];
+      console.log("case : 2");
       break;
     case 3:
       Question.answer1 = answersThree[i];
@@ -123,6 +123,7 @@ function setAnswer(){
       Question.answer3 = answersOne[i];
       Question.answer4 = correctAns[i];
       Question.correct = correctAns[i];
+      console.log("case : 3");
       break;
     default:
       (console.log("ERROR"));
