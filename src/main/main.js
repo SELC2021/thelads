@@ -55,10 +55,10 @@ function generateQuestion(){
 
   Question.question = questionBank[i];
   position = setAnswer();
-  // Question.answer1 = answersOne[i];
-  // Question.answer2 = answersTwo[i];
-  // Question.answer3 = answersThree[i];
-  // Question.answer4 = correctAns[i];
+  Question.answer1 = answersOne[i];
+  Question.answer2 = answersTwo[i];
+  Question.answer3 = answersThree[i];
+  Question.answer4 = correctAns[i];
 
 
   Question.correct = correctAns[i];
@@ -76,6 +76,8 @@ function setAnswer(){
 
   console.log("number: " + (ANS + 1));
   //randomize which answer goes where
+
+
 
   //track where the correct answer lands
 
