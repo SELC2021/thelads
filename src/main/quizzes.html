@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script type="text/javascript" src="main.js"></script>
+    <script type = "text/javascript" src= "../resources/Questions.js"></script>
+    <link rel="stylesheet" type="text/css" href="Quizes.css">
+    <title>PyEducate</title>
+</head>
+
+<body>
+    <header>
+        <div class="main">
+          <ul>
+              <li><a href='lessons.html'>Lessons</a></li>
+              <li><a href='quizzes.html'>Quizzes</a></li>
+              <li><a href='resources.html'>Resources</a></li>
+              <li><a href='faq.html'>FAQ</a></li>
+          </ul>
+        </div>
+       </header>
+    <p>
+        <table>
+            <tr>
+              <th id = "question"></th>
+            </tr>
+        </table>
+        <button id = "ans1"></button><button id = "ans2"></button>
+        <button id = "ans3"></button><button id = "ans4"></button>
+        <div id = "result"></div>
+    </p>
+    <div>
+      <button onclick = "generateQuestion()" id = "newQuestion">Click for new question</button>
+      <button onclick="testFunc()">test function</button>
+    </div>
+</body>
+
+
+</html>

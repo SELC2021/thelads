@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Century Gothic';
+
+}
+
+
+body {
+    background-color: grey;
+}
+
+table {
+    width: 100%;
+    padding: 20px;
+}
+button {width: 50%;
+height: 50px;
+font-size: 25px;}
+
+th{font-size: 25px;}
+
+ul{
+    list-style-type: none;
+    float: right;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border: 1px solid black;
+}
+div{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 20px;
+}

@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+p{
+    text-align: justify;
+    vertical-align: auto;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 20px;
+}
+*{
+margin: 0;
+padding: 0;
+font-family: 'Century Gothic';
+
+}
+body {
+background-color: grey;
+margin-top: 30px;
+
+}

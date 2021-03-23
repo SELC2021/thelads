@@ -1,0 +1,80 @@
+<html>
+<head>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>PyEducate</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+     $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+    });
+    });
+    </script>
+    <style>
+        dd {
+            padding-bottom: 5px;
+        }
+          h1{
+          text-align: center;
+          font-size: 60px;
+        }
+        p{
+          text-align: justify;
+          text-indent: 50px;
+          padding-top: 50px;
+          padding-left: 10px;
+          padding-right: 10px;
+          font-size: 20px;
+        }
+#panel, #flip {
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  background-color: #6d7374;
+  border: solid 1px #464444;
+}
+
+#panel {
+    margin: auto;
+  padding: 25px;
+  display: none;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+       <h1>
+           Lessons
+       </h1>
+        <div class="main">
+          <ul>
+              <li><a href='lessons.html'>Lessons</a></li>
+              <li><a href='quizzes.html'>Quizzes</a></li>
+              <li><a href='resources.html'>Resources</a></li>
+              <li><a href='faq.html'>FAQ</a></li>
+          </ul>
+          
+        </div>
+       </header>
+   
+       <p>This page serves as a basic directory for all of the lessons, please click below to see a list of all the accessible lessons.</p>
+      
+       <div id="flip">Click to view lessons</div>
+       <div id="panel">
+         <dl>
+             <dt><a href='lesson1.html'>Lesson 1</a></dt>
+             <dd>This lesson involves basic syntax</dd>
+             <dt><a href='#'>Lesson 2</a></dt>
+             <dd>This lesson involves variables and variable types</dd> 
+             <dt><a href='#'>Lesson 3</a></dt>
+             <dd>This lesson involves printing and obtaining user input</dd>
+             <dt><a href='#'>Lesson 4</a></dt>
+             <dd>This lesson involves basic math functions within Python</dd>
+         </dl>
+       </div>
+    </body>
+
+
+</html>
