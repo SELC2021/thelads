@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>PyEducate</title>
@@ -18,13 +19,21 @@
         }
         </style>
 </head>
-
 <body>
     <header>
         <h1>
-            Login
+          
         </h1>
+        <form>
         <div class="main">
+          <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" required>  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            <button type="submit">Login</button>   
+            <input type="checkbox" checked="checked"> Remember me   
+            <button type="button" class="cancelbtn"> Cancel</button>   
+            Forgot <a href="#"> password? </a> 
           <ul>
               <li><a href='lessons.html'>Lessons</a></li>
               <li><a href='quizzes.html'>Quizzes</a></li>
@@ -36,7 +45,8 @@
     <p>
         We need to sign in and link the java file to this page!!!!
     </p>
-</body>
+  </form>
+  </body>
 
 
 </html>
