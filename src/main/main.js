@@ -23,10 +23,14 @@ let ANS;
 //position clicked by user
 let CHECK;
 
+//poistion of clicked button
 let position;
 
+//has the user already answered this question
+let answered = true;
 
-
+//number of correct answers
+let points = 0;
 
 //test case for buttons
 // function testFunc(){
@@ -44,34 +48,42 @@ function update(){
     document.getElementById('ans2').innerHTML = Question.answer2;
     document.getElementById('ans3').innerHTML = Question.answer3;
     document.getElementById('ans4').innerHTML =  Question.answer4;
-    document.getElementById('result').innerHTML = Question.correct;
   });
+}
+
+function addPoint(){
+  points++;
+
 }
 
 
 
 //generate a question from a bank of questions
 function generateQuestion(){
-  console.log("generating question...");
+  if(answered){
+    answered = false;
+    console.log("generating question...");
 
-//generate a random number and set i = to it
-  console.log("Generating random number...");
-  let i = (Math.floor(Math.random() * questionBank.length));
+  //generate a random number and set i = to it
+    console.log("Generating random number...");
+    let i = (Math.floor(Math.random() * questionBank.length));
 
-//---------debug case for i
-  console.log("number: " + (i + 1) + "/" + questionBank.length);
+  //---------debug case for i
+    console.log("number: " + (i + 1) + "/" + questionBank.length);
 
-//set the question field in Question object
-  Question.question = questionBank[i];
+  //set the question field in Question object
+    Question.question = questionBank[i];
 
-  //set the answers to their positions
-  setAnswer(i);
+    //set the answers to their positions
+    setAnswer(i);
 
-  //update the screen to show questions and answers
-   update();
+    //update the screen to show questions and answers
+     update();
 
-   //----------debug case for question
-   console.log(Question.question);
+     //----------debug case for question
+     console.log(Question.question);
+  }
+
 
 }
 
@@ -139,14 +151,30 @@ function setAnswer(i){
   return ANS;
 }
 
+
+//check if answer location is = to correct location
+//yes -> add a point, next question
+//no -> next question
+
 function validateAnswer(pos){
+  if(answered == false){
+    answered = true;
 
-  CHECK = pos;
+    CHECK = pos || -1;
 
-  console.log(CHECK);
-  //parameters: question number,score
+    console.log(CHECK);
+    if(CHECK == ANS + 1){
+      console.log("Correct Answer");
+      document.getElementById('result').innerHTML = "Correct!";
+      addPoint();
+    }else{
+      console.log("Wrong Answer\(" + CHECK + "\)");
+      document.getElementById('result').innerHTML = "Wrong!";
+    }
+  }
 
-  //check if answer location is = to correct location
-  //yes -> add a point, next question
-  //no -> next question
+  //generateQuestion();
+
+
+
 }
