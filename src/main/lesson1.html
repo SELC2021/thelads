@@ -2,7 +2,15 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="lessons.css">
-
+<style>
+    #display { 
+        display: none;
+        text-align:center; 
+        font-size: larger;
+        
+    }
+    #display:target { display: block; }
+</style>
 <h1>
     Lesson 1: Basic Syntax
 </h1>
@@ -21,12 +29,27 @@
         It's as simple as setting your variable name equal to the variable content, as shown below.
     </p>
     
-        <img src="variableexample.png" alt="pog" class= "examples">
+    <img src="images/variableexample.png" alt="pog" class= "examples">
 
-    
-    
+    <p>
+        Invalid variable declarations would be similar to something below.
+    </p>
+    <img src="images/invalidvariable.png" alt="var" class="examples">
+    <p>
+        Unlike the above variables, this variable is attempting to assign itself to a variable that doesn't exist. If you wanted to initialize it equal to the letter "f" you would have to put quotation marks around it rather than just setting it equal to the letter on its own.
+    </p>
+    <br>
+    <p>
+        Another common beginner mistake is indentation, in Python, whitespace matters, as does indentation. Blocks of code must 
+        have the same level of spaces before the code itself. Otherwise, you will run into an indentation error. Additionally, indentation
+        will help keep your code organized and learning Python will allow you to build good indentation habits which will translate over to
+        your other language learning. 
+    </p>
+
+    <a href="#display">
+        <img src="images/indentinvalid.PNG" figcaption="has" class="examples"/>
+    </a>
+    <div id="display">This is <b>INCORRECT</b> Syntax</div>
 </body>
-
-
 
 </html>
