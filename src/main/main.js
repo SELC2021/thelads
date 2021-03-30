@@ -8,7 +8,6 @@ Group: TheLads
 
 /*
 @TODO
-Add method to move questions from question bank to already answered bank
 */
 
 /////////////////////////////////////////////////////////////////////////////////////
