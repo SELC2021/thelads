@@ -4,6 +4,16 @@ Class: SE186X
 Group: TheLads
 */
 
+/////////////////////////////////////////////////////////////////////////////////////
+
+/*
+@TODO
+Add method to move questions from question bank to already answered bank
+*/
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
 //question object that stores info about the question and answers generated
 let Question = {
    question : "",
@@ -32,15 +42,13 @@ let answered = true;
 //number of correct answers
 let points = 0;
 
-//test case for buttons
-// function testFunc(){
-//
-//   console.log("hello");
-//
-// }
+//array of question numbers answered
+let answeredBank = [];
 
-
-//update the screen and display the new question and answers
+/*
+@METHOD
+@DESCRIPTION - update the screen and display the new question and answers
+*/
 function update(){
   setInterval(function(){
     document.getElementById('question').innerHTML = Question.question;
@@ -51,37 +59,60 @@ function update(){
   });
 }
 
+
+/*
+@METHOD
+@DESCRIPTION - add 1 to points
+*/
 function addPoint(){
   points++;
-
 }
 
 
 
-//generate a question from a bank of questions
+/*
+@METHOD
+@DESCRIPTION - generates a random question from question bank
+*/
 function generateQuestion(){
-  if(answered){
+  //check if the user has answered the question
+  if(answered && answeredBank.length != questionBank.length){
     answered = false;
     console.log("generating question...");
+    document.getElementById('result').innerHTML = "";
 
   //generate a random number and set i = to it
     console.log("Generating random number...");
-    let i = (Math.floor(Math.random() * questionBank.length));
+    i = (Math.floor(Math.random() * questionBank.length));
 
-  //---------debug case for i
-    console.log("number: " + (i + 1) + "/" + questionBank.length);
 
-  //set the question field in Question object
-    Question.question = questionBank[i];
+    if(isAnswered()){
+      answered = true;
+      console.log("QUESTION ALREADY ANSWERED: " + i);
+      generateQuestion();
+    }else{
+      console.log("ADDING QUESTION: " + i + " TO THE ANSWERED BANK");
+      answeredBank.push(i);
 
-    //set the answers to their positions
-    setAnswer(i);
+      //---------debug case for i
+        console.log("number: " + (i + 1) + "/" + questionBank.length);
 
-    //update the screen to show questions and answers
-     update();
+      //set the question field in Question object
+        Question.question = questionBank[i];
 
-     //----------debug case for question
-     console.log(Question.question);
+        //set the answers to their positions
+        setAnswer(i);
+
+        //update the screen to show questions and answers
+         update();
+
+         //----------debug case for question
+         console.log(Question.question);
+    }
+
+
+  }else{
+    document.getElementById('result').innerHTML = points + " / " + questionBank.length;
   }
 
 
@@ -90,22 +121,19 @@ function generateQuestion(){
 /*
 @METHOD
 @DESCRIPTION - sets the answers positions
-@PARAM i = index of questions and answers
-@PARAM - ANS = position of correct answer
+@PARAM - i = index of questions and answers
+@RETURNS - ANS = position of correct answer
 */
 function setAnswer(i){
-
-  console.log("Generating answers...");
-
-
 //generate random number to decide where correct answer goes
+  console.log("Generating answers...");
   console.log("Generating random number...");
    ANS = Math.floor(Math.random() * 4);
 
 //---------debug case for ANS
   console.log("number: " + (ANS + 1));
-  //randomize which answer goes where and keep track of where it is
 
+  //randomize which answer goes where and keep track of where it is
   switch(ANS){
     case 0:
       Question.answer1 = correctAns[i];
@@ -144,25 +172,27 @@ function setAnswer(i){
       break;
   }
 
-
-
-
   //return correct answer location
   return ANS;
 }
 
 
-//check if answer location is = to correct location
-//yes -> add a point, next question
-//no -> next question
 
+
+/*
+@METHOD
+@DESCRIPTION - validate the users answer and check it against the correct positions
+@PARAM - pos = button clicked by user
+*/
 function validateAnswer(pos){
+  //if the user hasn't answered already
   if(answered == false){
     answered = true;
-
+    //check = button pressed or -1 for error
     CHECK = pos || -1;
-
     console.log(CHECK);
+
+    //if the user clicked correct answer
     if(CHECK == ANS + 1){
       console.log("Correct Answer");
       document.getElementById('result').innerHTML = "Correct!";
@@ -172,9 +202,20 @@ function validateAnswer(pos){
       document.getElementById('result').innerHTML = "Wrong!";
     }
   }
-
-  //generateQuestion();
-
+}
 
 
+
+/*
+@METHOD
+@DESCRIPTION - returns whether or not the question has already been answered
+@RETURNS true or false
+*/
+
+function isAnswered(){
+  if(answeredBank.includes(i)){
+    return true;
+  }else{
+    return false;
+  }
 }
