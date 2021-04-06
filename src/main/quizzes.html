@@ -10,6 +10,7 @@
     <header>
         <div class="main">
           <ul>
+              <li><a href='index.htm'>Home</a></li>
               <li><a href='lessons.html'>Lessons</a></li>
               <li><a href='quizzes.html'>Quizzes</a></li>
               <li><a href='resources.html'>Resources</a></li>
@@ -23,13 +24,12 @@
               <th id = "question"></th>
             </tr>
         </table>
-        <button id = "ans1"></button><button id = "ans2"></button>
-        <button id = "ans3"></button><button id = "ans4"></button>
+        <button id = "ans1" onclick = "validateAnswer('1')"></button><button id = "ans2" onclick = "validateAnswer('2')"></button>
+        <button id = "ans3" onclick = "validateAnswer('3')"></button><button id = "ans4" onclick = "validateAnswer('4')"></button>
         <div id = "result"></div>
     </p>
     <div>
       <button onclick = "generateQuestion()" id = "newQuestion">Click for new question</button>
-      <button onclick="testFunc()">test function</button>
     </div>
 </body>
 
