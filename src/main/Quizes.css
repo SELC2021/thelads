@@ -8,6 +8,7 @@
 
 body {
     background-color: grey;
+    margin-top: 50px;
 }
 
 table {
@@ -16,7 +17,9 @@ table {
 }
 button {width: 50%;
 height: 50px;
-font-size: 25px;}
+font-size: 25px;
+text-align: center;
+}
 
 th{font-size: 25px;}
 
@@ -34,9 +37,4 @@ ul li a{
     color: black;
     padding: 10px 20px;
     border: 1px solid black;
-}
-div{
-    font-size: 25px;
-    text-align: center;
-    padding-top: 20px;
 }

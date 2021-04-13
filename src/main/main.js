@@ -13,6 +13,7 @@ Group: TheLads
 /////////////////////////////////////////////////////////////////////////////////////
 
 
+
 //question object that stores info about the question and answers generated
 let Question = {
    question : "",
@@ -69,6 +70,7 @@ function addPoint(){
 
 
 
+
 /*
 @METHOD
 @DESCRIPTION - generates a random question from question bank
@@ -77,6 +79,7 @@ function generateQuestion(){
   //check if the user has answered the question
   if(answered && answeredBank.length != questionBank.length){
     answered = false;
+    document.getElementById('newQuestion').innerHTML = "Click to see score or click an answer";
     console.log("generating question...");
     document.getElementById('result').innerHTML = "";
 
@@ -186,6 +189,7 @@ function setAnswer(i){
 function validateAnswer(pos){
   //if the user hasn't answered already
   if(answered == false){
+    document.getElementById('newQuestion').innerHTML = "Click for next question";
     answered = true;
     //check = button pressed or -1 for error
     CHECK = pos || -1;

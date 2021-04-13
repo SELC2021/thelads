@@ -4,19 +4,54 @@
     <script type = "text/javascript" src= "../resources/Questions.js"></script>
     <link rel="stylesheet" type="text/css" href="Quizes.css">
     <title>PyEducate</title>
+    <style>
+      dd {
+            padding-bottom: 5px;
+        }
+          h1{
+          text-align: center;
+          font-size: 60px;
+        }
+        p{
+          text-align: justify;
+          text-indent: 50px;
+          padding-top: 50px;
+          padding-left: 10px;
+          padding-right: 10px;
+          font-size: 20px;
+        }
+
+        #panel, #flip {
+          margin: auto;
+          padding: 5px;
+          text-align: center;
+          background-color: #6d7374;
+          border: solid 1px #464444;
+        }
+
+        #panel {
+          margin: auto;
+          padding: 25px;
+          display: none;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="main">
-          <ul>
-              <li><a href='index.htm'>Home</a></li>
-              <li><a href='lessons.html'>Lessons</a></li>
-              <li><a href='quizzes.html'>Quizzes</a></li>
-              <li><a href='resources.html'>Resources</a></li>
-              <li><a href='faq.html'>FAQ</a></li>
-          </ul>
-        </div>
+      <h1>
+        Quizzes
+      </h1>
+
+      <div class="main">
+        <ul>
+            <li><a href='index.htm'>Home</a></li>
+            <li><a href='lessons.html'>Lessons</a></li>
+            <li><a href='quizzes.html'>Quizzes</a></li>
+            <li><a href='resources.html'>Resources</a></li>
+            <li><a href='faq.html'>FAQ</a></li>
+        </ul>
+      </div>
        </header>
     <p>
         <table>
@@ -26,11 +61,15 @@
         </table>
         <button id = "ans1" onclick = "validateAnswer('1')"></button><button id = "ans2" onclick = "validateAnswer('2')"></button>
         <button id = "ans3" onclick = "validateAnswer('3')"></button><button id = "ans4" onclick = "validateAnswer('4')"></button>
-        <div id = "result"></div>
+        <table>
+          <tr>
+            <th id = "result"></th>
+          </tr>
+        </table>
     </p>
-    <div>
-      <button onclick = "generateQuestion()" id = "newQuestion">Click for new question</button>
-    </div>
+    <h1>
+      <button onclick = "generateQuestion()" id = "newQuestion">Click to start quiz</button>
+    </h1>
 </body>
 
 
