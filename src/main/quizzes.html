@@ -34,6 +34,12 @@
           padding: 25px;
           display: none;
         }
+        .adjust{
+          text-align: left;
+          padding-left: 800px;
+          width: 100%;
+          padding: 20px;
+        }
     </style>
 </head>
 
@@ -54,11 +60,13 @@
       </div>
        </header>
     <p>
-        <table>
+      
+        <table class="adjust">
             <tr>
               <th id = "question"></th>
             </tr>
         </table>
+      
         <button id = "ans1" onclick = "validateAnswer('1')"></button><button id = "ans2" onclick = "validateAnswer('2')"></button>
         <button id = "ans3" onclick = "validateAnswer('3')"></button><button id = "ans4" onclick = "validateAnswer('4')"></button>
         <table>
