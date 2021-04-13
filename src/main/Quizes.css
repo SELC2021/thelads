@@ -14,6 +14,7 @@ body {
 table {
     width: 100%;
     padding: 20px;
+    margin-left: auto;
 }
 button {width: 50%;
 height: 50px;
