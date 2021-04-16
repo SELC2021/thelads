@@ -17,6 +17,7 @@ Group: TheLads
 //question object that stores info about the question and answers generated
 let Question = {
    question : "",
+   code : "",
    answer1 : "",
    answer2 : "",
    answer3 : "",
@@ -52,6 +53,7 @@ let answeredBank = [];
 function update(){
   setInterval(function(){
     document.getElementById('question').innerHTML = Question.question;
+    document.getElementById('code').innerHTML = Question.code;
     document.getElementById('ans1').innerHTML = Question.answer1;
     document.getElementById('ans2').innerHTML = Question.answer2;
     document.getElementById('ans3').innerHTML = Question.answer3;
@@ -101,6 +103,7 @@ function generateQuestion(){
 
       //set the question field in Question object
         Question.question = questionBank[i];
+        Question.code = codeBank[i];
 
         //set the answers to their positions
         setAnswer(i);
@@ -110,6 +113,7 @@ function generateQuestion(){
 
          //----------debug case for question
          console.log(Question.question);
+         console.log(Question.code);
     }
 
 

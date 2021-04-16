@@ -34,6 +34,11 @@
           padding: 25px;
           display: none;
         }
+        .tablez{
+          text-align: justify;
+          width: 50%;
+          padding-right: 100px;
+        }
     </style>
 </head>
 
@@ -54,11 +59,19 @@
       </div>
        </header>
     <p>
+      
         <table>
             <tr>
               <th id = "question"></th>
             </tr>
         </table>
+        <div>
+          <table class = "tablez">
+            <tr>
+              <th id = "code"></th>
+            </tr>
+          </table>
+        </div>
         <button id = "ans1" onclick = "validateAnswer('1')"></button><button id = "ans2" onclick = "validateAnswer('2')"></button>
         <button id = "ans3" onclick = "validateAnswer('3')"></button><button id = "ans4" onclick = "validateAnswer('4')"></button>
         <table>
