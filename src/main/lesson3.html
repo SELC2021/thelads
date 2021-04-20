@@ -1,0 +1,70 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="lessons.css">
+<h1>Introduction to print() and input()</h1>
+<script>
+    var displayUsername = function() {
+
+var username = document.getElementById('username').value
+
+if(username != '') {
+
+  document.getElementById('message').innerHTML = 'Username: '+username+'!'
+
+}
+
+}
+
+</script>
+<style>
+  .container{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+
+  }
+       
+   
+</style>
+</head>
+
+<body>
+<p>Lessons 1 and 2 were fairly basic introductions to simple Python concepts like syntax and variables. Lesson 3 will focus on usage of these concepts in order to run a basic program</p>
+<br>
+<p>
+  The print() function in Python is a simple yet versitile function that allows you to print a message to the screen or other output device.
+  The message can be a string variable or any other data type, though it will be converted to a string before being written to the screen.
+  Another thing to note about Python is that whitespace is very important. In this instance, all that means is that when calling the print function it will always create a new line.
+
+
+</p>
+<br>
+<img src="../resources/images/printintro.PNG" alt="var" class="examples">
+<br>
+<p>The print function on its own is fairly easy to comprehend and luckily, it doesn't get much more complex with the input function.
+    The input function simply allows you to take user input 
+</p>
+<br>
+<img src="../resources/images/printdemo.PNG" alt="var" class="examples">
+<div class="container">
+    <button class="clickMe" onclick="displayUsername()">Run!</button>
+    <input type="text" name="username" id="username">
+    <div id="message"></div>
+</div>
+<br>
+<p>
+    As you can see, adding the + allowed us to add the variable after the original string. You can do this over multiple instances, as shown below.
+</p>
+<br>
+<img src="../resources/images/printcombo.PNG" alt="var" class="examples">
+<br>
+<p>In the next lesson, you will learn how to work with basic mathmatics operations within Python!</p>
+
+<div class="center">
+    <a class="button" href="lessons.html">All Lessons</a> 
+    <a class="button" href="lesson4.html">Lesson 4</a>
+    </div>
+
+</body>
+</html>
